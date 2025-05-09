@@ -1,7 +1,7 @@
 ##  お問い合わせフォーム
 
 ###  Docker
-  git clone  
+  git clone
   docker-compose up -d --build
 ###  laravel環境構築
   docker-compose exec php bash
