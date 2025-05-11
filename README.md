@@ -13,4 +13,5 @@
 ### ER図
 
 ### URL
+  お問い合わせフォーム:http://localhost/
   php MyAdmin:http://localhost:8080/
