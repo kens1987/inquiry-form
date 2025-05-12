@@ -15,4 +15,7 @@ use App\Http\Controllers\InquiryController;
 |
 */
 
-Route::get('/', [InquiryController::class, 'register']);
+// Route::get('/', [InquiryController::class, 'register']);
+Route::middleware('auth')->group(function(){
+    Route::get('/', [InquiryController::class, 'admin']);
+});

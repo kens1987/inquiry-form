@@ -12,9 +12,14 @@
         <div class="header__inner">
             <a class="header__logo" href="/">FashionablyLate</a>
         </div>
+        @if(Auth::check())
         <div class="header__nav">
-            <a class="header__nav-item" href="/login">logout</a>
+            <form action="/logout" method="post">
+                @csrf
+                <button class="header__nav-item" type="submit">logout</button>
+            </form>
         </div>
+        @endif
     </header>
     <main>
                 <div class="contact-form__content">
