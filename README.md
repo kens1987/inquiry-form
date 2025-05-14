@@ -7,9 +7,10 @@
   docker-compose exec php bash  
   composer install  
   .envファイルは、.env.exampleをコピーし作成  
-  Fortifyの導入、app.php修正（ローカル変更、サービスプロバイダー追加）  
-  FortifyServiceProvider.php 修正（RouteServiceProvider.php修正、日本語ファイルのインストール）  
+  php artisan make:key generate
+  php artisan migrate  
   
+
 
 ### 使用技術
 
