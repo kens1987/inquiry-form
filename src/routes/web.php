@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\InquiryController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,6 +17,9 @@ use App\Http\Controllers\InquiryController;
 */
 
 // Route::get('/', [InquiryController::class, 'register']);
-Route::middleware('auth')->group(function(){
-    Route::get('/', [InquiryController::class, 'admin']);
-});
+Route::get('/', [InquiryController::class, 'contact']);
+Route::post('/contacts/confirm', [InquiryController::class, 'confirm']);
+
+// Route::middleware('auth')->group(function(){
+//     Route::get('/', [InquiryController::class, 'admin']);
+// });

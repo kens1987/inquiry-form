@@ -21,7 +21,7 @@ class InquiryRequest extends FormRequest
      *
      * @return array
      */
-    public function rules():array
+    public function rules()
     {
         return [
             'name' => 'required',
@@ -29,12 +29,12 @@ class InquiryRequest extends FormRequest
             'password' => 'required'
         ];
     }
-    public function messages(){
-        return[
-            'name.required' => 'お名前を入力してください',
-            'email.required' => 'メールアドレスを入力してください',
-            'email.email' => 'メールアドレスは「ユーザー名＠ドメイン」形式で入力してください',
-            'password.required' => 'パスワードを入力してください'
-        ];
-    }
+    // public function messages(){
+    //     return[
+    //         'name.required' => 'お名前を入力してください',
+    //         'email.required' => 'メールアドレスを入力してください',
+    //         'email.email' => 'メールアドレスは「ユーザー名＠ドメイン」形式で入力してください',
+    //         'password.required' => 'パスワードを入力してください'
+    //     ];
+    // }
 }
