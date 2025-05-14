@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-// use App\Http\Requests\RegisterRequest;
+use App\Http\Requests\InquiryRequest;
 
 class InquiryController extends Controller
 {
@@ -13,8 +13,10 @@ class InquiryController extends Controller
     public function contact(){
         return view('contact');
     }
-    public function confirm(Request $request){
-        $contact = $request->only(['name','gender','email','tel','address','building','detail','content']);
+    public function confirm(InquiryRequest $request){
+        $tel = $request->input('tel1').'-'.$request->input('tel2').'-'.$request->input('tel3');
+        $contact = $request->only(['last_name','first_name','gender','email','address','building','detail','content']);
+        $contact['tel'] = $tel;
         return view('confirm',['contact'=>$contact]);
     }
 }

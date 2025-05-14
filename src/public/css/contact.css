@@ -59,6 +59,24 @@
     color: #f5a6a2;
 }
 
+.form__input--tel {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.form__input--tel input {
+    width: 100px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.dash {
+    margin: 0.5px;
+}
+
 .form__error {
     height: 20px;
     color: #ff0000;
