@@ -22,13 +22,14 @@
             <div class="confirm__heading">
                 <h2>confirm</h2>
             </div>
-            <form class="form">
+            <form class="form" action="/contacts" method="POST">
+                @csrf
                 <div class="confirm-table">
                     <table class="confirm-table__inner">
                         <tr class="confirm-table__row">
                             <th class="confirm-table__header">お名前</th>
                                 <td class="confirm-table__text">
-                                    <input type="text" name="name" value="{{$contact['last_name'] ??'' }} {{$contact['first_name'] ??'' }}" readonly />
+                                    <input type="text" name="name" value="{{$contact['last_name'] ??'' }}   {{$contact['first_name'] ??'' }}" readonly />
                                 </td>
                         </tr>
                         <tr class="confirm-table__row">
@@ -78,6 +79,7 @@
                 <div class="form__button">
                     <button class="form__button-submit" type="submit">送信</button>
                 </div>
+                <a href="/">修正</a>
             </form>
         </div>
     </main>

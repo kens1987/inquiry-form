@@ -7,8 +7,11 @@
   docker-compose exec php bash  
   composer install  
   .envファイルは、.env.exampleをコピーし作成  
-  php artisan make:key generate
+  php artisan make:key generate  
   php artisan migrate  
+  （マイグレーション：user、categories、contacts）  
+  php artisan db:seed  
+  （シーダー：categories）（ファクトリ：contacts）  
   
 
 
