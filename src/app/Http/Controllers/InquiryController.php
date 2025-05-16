@@ -22,7 +22,7 @@ class InquiryController extends Controller
     }
     public function thanks(Request $request){
         $tel = $request->input('tel1').'-'.$request->input('tel2').'-'.$request->input('tel3');
-        $contact = $request->only(['last_name','first_name','gender','email','address','building','detail','content']);
+        $contact = $request->only(['last_name','first_name','gender','email','address','building','detail','content',]);
         $contact['tel'] = $tel;
         Contact::create($contact);
         return view('thanks');

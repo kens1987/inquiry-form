@@ -11,10 +11,7 @@
   php artisan migrate  
   （マイグレーション：user、categories、contacts）  
   php artisan db:seed  
-  （シーダー：categories）（ファクトリ：contacts）  
-  
-
-
+  （シーディング：categories）（ファクトリ：contacts）  
 ### 使用技術
 
 ### ER図
