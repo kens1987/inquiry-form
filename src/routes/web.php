@@ -1,8 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\InquiryController;
+use Illuminate\Support\Facades\Route;
 
 
 /*
@@ -19,7 +18,8 @@ use App\Http\Controllers\InquiryController;
 // Route::get('/', [InquiryController::class, 'register']);
 Route::get('/', [InquiryController::class, 'contact']);
 Route::post('/contacts/confirm', [InquiryController::class, 'confirm']);
-Route::post('/contacts', [InquiryController::class, 'thanks']);
+Route::post('/thanks', [InquiryController::class, 'thanks']);
+// Route::get('/thanks', [InquiryController::class, 'thanks']);
 
 // Route::middleware('auth')->group(function(){
 //     Route::get('/', [InquiryController::class, 'admin']);

@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use App\Models\Category;
 
 class CategoriesTableSeeder extends Seeder
 {
@@ -24,5 +25,6 @@ class CategoriesTableSeeder extends Seeder
         DB::table('categories')->insert($param);
         $param = ['content' => 'その他'];
         DB::table('categories')->insert($param);
+        Category::factory()->count()->create();
     }
 }

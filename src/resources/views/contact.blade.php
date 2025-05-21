@@ -56,9 +56,7 @@
                             <label><input type="radio" name="gender" value="その他" />その他</label>
                         <!-- </div> -->
                         <div class="form__error">
-                        @error('gender')
-                        {{$message}}
-                        @enderror
+                        @error('gender'){{$message}}@enderror
                         </div>
                     </div>
                 </div>
@@ -72,9 +70,7 @@
                             <input type="email" name="email" placeholder="例：test@example.com" value="{{ old('email') }}" />
                         </div>
                         <div class="form__error">
-                        @error('email')
-                        {{$message}}
-                        @enderror
+                        @error('email'){{$message}}@enderror
                         </div>
                     </div>
                 </div>
@@ -108,9 +104,7 @@
                             <input type="text" name="address" placeholder="例：東京都渋谷区千駄ヶ谷1-2-3" value="{{ old('address') }}" />
                         </div>
                         <div class="form__error">
-                            @error('address')
-                            {{$message}}
-                            @enderror
+                            @error('address'){{$message}}@enderror
                         </div>
                     </div>
                 </div>
@@ -131,7 +125,7 @@
                     </div>
                     <div class="form__group-content">
                         <div class="form__input--text">
-                            <select name="detail" >
+                            <select name="detail" value="{{ old('detail') }}" >
                                 <option value="">選択してください</option>
                                 <option value="商品のお届けについて">商品のお届けについて</option>
                                 <option value="商品の交換について">商品の交換について</option>
@@ -141,9 +135,7 @@
                             </select>
                         </div>
                         <div class="form__error">
-                            @error('detail')
-                            {{$message}}
-                            @enderror
+                            @error('detail'){{$message}}@enderror
                         </div>
                     </div>
                 </div>
@@ -154,12 +146,10 @@
                     </div>
                     <div class="form__group-content">
                         <div class="form__input--textarea">
-                            <textarea name="content" placeholder="お問合せ内容をご記載ください" value="{{ old('content') }}"></textarea>
+                            <textarea name="content" placeholder="お問合せ内容をご記載ください" >{{ old('content') }}</textarea>
                         </div>
                             <div class="form__error">
-                            @error('content')
-                            {{$message}}
-                            @enderror
+                            @error('content'){{$message}}@enderror
                         </div>
                     </div>
                 </div>

@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Category;
-// use App\Models\Contact;
+use App\Models\Contact;
 
 class ContactFactory extends Factory
 {
